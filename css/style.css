@@ -1,0 +1,159 @@
+body {
+  font-size: 16px;
+  font-family: 'Dancing Script', cursive;
+  background: #02010a;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+img {
+  box-shadow: 2px 2px 2px #02010a;
+  width: 100%;
+}
+
+
+header {
+  background: #5b7989;
+  color: #FFF;
+  padding: 1em;
+  border-radius: 5px 5px 0 0;
+  clear: both;
+  animation: slideIn 1s;
+}
+@keyframes slideIn {
+  0% { margin-top: 150%;}
+  60% { margin-top: -5%;}
+  100% { margin-top: 0;}
+}
+
+header h1 {
+  text-shadow: 2px 2px 2px #02010a;
+  font-weight:600;
+  float: left;
+  margin: 0;
+  font-size: 2em;
+  padding: 16px 0;
+}
+header nav {
+  text-align: left;
+  float: right;
+}
+
+header nav a {
+  color: #FFF;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2em 1em;
+}
+header nav a:hover { text-shadow:2px 2px 2px #02010a; }
+
+.currentLink {
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px #02010a;
+}
+
+.main-image {
+  background: #82c3a6;
+  padding: 1em;
+  text-align: center;
+  }
+.main-image img {
+  width: 90%;
+}
+
+.secondary-image {
+  display: flex;
+  background: #d5c75f;
+}
+.secondary-image div {
+  padding: 1em;
+}
+.secondary-image img {
+  border: 1px solid #000;
+  transition: all 1s;
+}
+.secondary-image .box1 img:hover {
+  transform: rotate(10deg);
+  box-shadow: 2px 2px #82c3a6;
+  border: 2px solid #000;
+}
+.secondary-image .box2 img:hover {
+  transform: translate(20px, -5px);
+  box-shadow: 2px 2px #82c3a6;
+  border: 2px solid #000;
+}
+
+.content {
+  background: #82c3a6;
+  padding: 1em;
+}
+.content div {
+  width: 29.333333%;
+  float: left;
+  margin: 1em 2%;
+}
+.content div:nth-child(1) {
+  -webikit-filter: blur(10px);
+  filter: blur(10px);
+}
+.content div:nth-child(even) {
+  -webkit-filter: grayscale();
+  filter: grayscale();
+}
+
+.content div:nth-child(3) {
+  -webikit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+footer {
+  background: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  padding: 1em 0;
+}
+
+footer div {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+footer a:hover { text-decoration: underline;}
+footer a img {
+  width: 12px;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    width: 100%;
+  }
+  .main-image img {
+    width: 100%;
+  }
+  footer div {
+    width: 50%;
+  }
+
+  .secondary-image {
+    flex-wrap: wrap;
+  }
+
+  .content div {
+    width: 100%;
+  }
+}
